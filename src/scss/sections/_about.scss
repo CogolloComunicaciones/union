@@ -1,0 +1,18 @@
+.about {
+  .effect-image {
+    text-align: right;
+    z-index: 1;
+    img {
+      width: 300px;
+      transform: translate3d(200px, 50px, 0);
+      @include desktop-full {
+        width: 320px;
+      }
+    }
+  }
+  .box-content__bckg {
+    margin-top: 70px;
+    padding: 20px 30px 20px 250px;
+    background-color: #000835;
+  }
+}

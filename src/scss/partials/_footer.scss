@@ -1,0 +1,23 @@
+.footer {
+  &-contact {
+    padding: 40px 40px 0 40px;
+    &--copy {
+     margin-bottom: 40px; 
+    }
+    &--title {
+      margin-bottom: 20px;
+    }
+    &--paragraph {
+      margin: 0;
+    }
+  }
+  &-copyright {
+    padding-top: 20px;
+    img {
+      margin-right: 20px;
+    }
+    &--copy {
+      margin: 0;
+    }
+  }
+}

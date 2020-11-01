@@ -1,0 +1,129 @@
+@font-face {
+  font-family: "bronovabold";
+  src: url("../fonts/bronova_bold-webfont.woff2") format("woff2"),
+    url("../fonts/bronova_bold-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "bronovaregular";
+  src: url("../fonts/bronova_regular-webfont.woff2") format("woff2"),
+    url("../fonts/bronova_regular-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Manjari:wght@100;400;700&display=swap');
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: $fontManjari;
+  line-height: normal;
+  //font-family: $fontBronovaRegular;
+  //font-family: $fontBronovaBold;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin: 0;
+}
+
+.h1 {
+  font-family: $fontBronovaRegular;
+  @include font-size(25, 30, 0);
+  color: $white;
+  font-weight: 100;
+
+  @include tablet {
+    @include font-size(35, 40, 0);
+  }
+
+  @include large {
+    @include font-size(45, 50, 0);
+  }
+}
+
+.h2 {
+  font-family: $fontBronovaRegular;
+  @include font-size(25, 30, 0);
+  color: $white;
+  font-weight: 100;
+
+  @include tablet {
+    @include font-size(35, 40, 0);
+  }
+
+  @include large {
+    @include font-size(45, 50, 0);
+  }
+}
+
+.h3 {
+  font-family: $fontBronovaRegular;
+  @include font-size(18, 23, 0);
+  color: $color__primary;
+  font-weight: 100;
+  margin-bottom: 10px;
+
+  @include tablet {
+    @include font-size(20, 25, 0);
+  }
+
+  @include large {
+    @include font-size(23, 28, 0);
+  }
+}
+
+.h4 {
+  font-family: $fontBronovaRegular;
+  @include font-size(14, 19, 0);
+  color: $white;
+  font-weight: 100;
+
+  @include tablet {
+    @include font-size(14, 19, 0);
+  }
+
+  @include large {
+    @include font-size(16, 21, 0);
+  }
+}
+
+.h5 {
+  font-family: $fontBronovaRegular;
+  @include font-size(14, 19, 0);
+  color: $white;
+
+  @include tablet {
+    @include font-size(16, 21, 0);
+  }
+
+  @include large {
+    @include font-size(16, 21, 0);
+  }
+}
+
+.paragraph {
+  font-family: $fontBronovaRegular;
+  @include font-size(14, 18, 0);
+  margin-bottom: 20px;
+  color: $white;
+  text-align: justify;
+
+  @include tablet {
+    @include font-size(16, 20, 0);
+  }
+
+  @include large {
+    @include font-size(16, 20, 0);
+  }
+}
