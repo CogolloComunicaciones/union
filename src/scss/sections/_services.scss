@@ -1,6 +1,10 @@
 .services {
   figure {
-    padding: 0 100px;
+    .image {
+      width: 100%;
+      max-width: 200px;
+      margin: 0 auto;
+    }
   }
   figcaption {
     margin-top: 20px;

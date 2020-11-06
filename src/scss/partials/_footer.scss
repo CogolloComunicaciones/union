@@ -2,13 +2,31 @@
   &-contact {
     padding: 40px 40px 0 40px;
     &--copy {
-     margin-bottom: 40px; 
+      margin-bottom: 40px;
     }
     &--title {
       margin-bottom: 20px;
     }
     &--paragraph {
       margin: 0;
+    }
+    &--social {
+      display: flex;
+      justify-content: flex-end;
+      a {
+        width: 20px;
+        display: block;
+        margin-left: 15px;
+        transition: all .4s ease-in;
+        &:hover {
+          svg path {
+            fill: $color__primary;
+          }
+        }
+      }
+      svg path {
+        fill: $white;
+      }
     }
   }
   &-copyright {

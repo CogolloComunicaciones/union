@@ -11,7 +11,7 @@
   transition: all 0.2s ease;
   &.sticky {
     height: 80px;
-    background-color: $color__primary--opacity;
+    //background-color: $color__primary--opacity;
     .header-logo--text {
       width: 0;
     }
@@ -74,7 +74,7 @@
   &-logo {
     text-decoration: none;
     &--text {
-      width: 210px;
+      //width: 210px;
       opacity: 1;
       transition: all 0.2s ease;
     }
