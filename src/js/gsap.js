@@ -1,29 +1,41 @@
-TweenMax.from(".header-logo", .5, {
+TweenMax.from("video", .1, {
   delay: .5,
-  y: "10",
+  y: "0",
   opacity: 0,
-  ease: Expo.easeInOut
+  lazy: true,
+  ease: Expo.easeIn
 });
 
-TweenMax.from(".menu", 1.5, {
+TweenMax.from(".header-logo", 1, {
   delay: .5,
-  y: "10",
+  y: "-10",
   opacity: 0,
-  ease: Expo.easeInOut
+  lazy: true,
+  ease: Expo.easeIn
+});
+
+TweenMax.from(".menu", 1, {
+  delay: .5,
+  y: "-10",
+  opacity: 0,
+  lazy: true,
+  ease: Expo.easeIn
 });
 
 TweenMax.from(".title", 2, {
   delay: .5,
   y: "10",
   opacity: 0,
-  ease: Expo.easeInOut
+  lazy: true,
+  ease: Expo.easeIn
 });
 
-TweenMax.from(".hero-services--small", 2.5, {
+TweenMax.from(".hero-services--small", 2, {
   delay: .5,
   y: "10",
   opacity: 0,
-  ease: Expo.easeInOut
+  lazy: true,
+  ease: Expo.easeIn
 });
 
 function animateFrom(elem, direction) {
