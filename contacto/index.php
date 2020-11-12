@@ -62,34 +62,44 @@
             </div>
           </div>
           <div class="col-6">
-            <div class="form-content animation animation-item">
+          <form class="contact" action="" method="post">
+            <div class="form-content">
               <div class="form-group">
-                <label for="">NOMBRE:</label>
-                <input type="text" id="name" name="name">
+                <label for="">Nombre:</label>
+                <input type="text" name="name" placeholder="Nombre" required>
               </div>
               <div class="form-group">
-                <label for="">APELLIDOS:</label>
-                <input type="text" id="name" name="name">
+                <label for="">Apellidos:</label>
+                <input type="text" name="lastname" placeholder="Apellidos" required>
               </div>
               <div class="form-group">
-                <label for="">CORREO:</label>
-                <input type="text" id="name" name="name">
+                <label for="">Correo:</label>
+                <input type="email" name="email" placeholder="Email" required>
               </div>
               <div class="form-group">
                 <label for="">SERVICIO</label>
-                <select name="" id="">
-                  <option value="">PROINVESTOR</option>
-                  <option value="">UNION REALTY</option>
-                  <option value="">FACT CASH</option>
-                  <option value="">PAGO DE OBLIGACIONES EN EL EXTERIOR</option>
-                  <option value="">GESTIÓN DE CRÉDITO</option>
-                  <option value="">CONSULTORÍA, PLANIFICACIÓN Y ESTRUCTURACIÓN FINANCIERA</option>
+                <select name="service" required>
+                  <option value="PROINVESTOR">PROINVESTOR</option>
+                  <option value="UNION REALTY">UNION REALTY</option>
+                  <option value="FACT CASH">FACT CASH</option>
+                  <option value="PAGO DE OBLIGACIONES EN EL EXTERIOR">PAGO DE OBLIGACIONES EN EL EXTERIOR</option>
+                  <option value="GESTIÓN DE CRÉDITO">GESTIÓN DE CRÉDITO</option>
+                  <option value="CONSULTORÍA, PLANIFICACIÓN Y ESTRUCTURACIÓN FINANCIERA">CONSULTORÍA, PLANIFICACIÓN Y ESTRUCTURACIÓN FINANCIERA</option>
                 </select>
               </div>
               <div class="form-group">
-                <button class="btn btn--transparent btn--medium border--primary">ENVIAR</button>
+                <input type="submit" name="submit" class="send-btn" value="Send">
               </div>
             </div>
+          </form>
+            <!--alert messages start-->
+            <?php echo $alert; ?>
+            <!--alert messages end-->
+            <script type="text/javascript">
+              if (window.history.replaceState) {
+                window.history.replaceState(null, null, window.location.href);
+              }
+            </script>
           </div>
         </div>
       </div>

@@ -100,6 +100,7 @@ import replace from "gulp-replace";
       watch(['src/**/*','!src/{images,js,scss}','!src/{images,js,scss}/**/*'], series(copy, reload));
       watch('src/js/**/*.js', series(scripts, reload));
       watch("./*.html", reload);
+      watch("./*.php", reload);
     } 
     export const dev = series(clean, parallel(styles, images, copy, scripts), serve, watchForChanges);
     export const build = series(clean, parallel(styles, images, copy, scripts), compress);
