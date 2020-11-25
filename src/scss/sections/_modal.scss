@@ -59,4 +59,10 @@
       fill: $color__primary;
     }
   }
+  #chartContainer {
+    button,
+    .canvasjs-chart-credit {
+      display: none !important;
+    }
+  }
 }
