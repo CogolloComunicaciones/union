@@ -15,12 +15,24 @@
       margin-bottom: 0;
     }
   }
+  .paragraph-height {
+    height: 50px;
+  }
   .small {
     width: 100%;
     max-width: 230px;
     margin: 10px auto 0 auto;
     color: #fff;
     text-align: center;
+    &-medium {
+      width: 100%;
+      max-width: 250px;
+      margin: 10px auto 0 auto;
+      color: #fff;
+      text-align: center;
+      height: 60px;
+      overflow: hidden;
+    }
   }
   .btn--primary {
     min-width: 125px;
