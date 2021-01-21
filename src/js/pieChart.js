@@ -1,39 +1,31 @@
 window.onload = function () {
   if ($("#chartContainer").length > 0) {
   var chart = new CanvasJS.Chart("chartContainer", {
-    exportEnabled: true,
     animationEnabled: true,
-    legend: {
-      fontColor: "#FFF",
-    },
-    backgroundColor: "transparent",
     title: {
-      //text: "Title"
+      text: ""
     },
-    legend: {
-      itemWidth: 200,
-      fontColor: "#FFFFFF",
-      cursor: "pointer",
-      itemclick: explodePie,
+    axisY: {
+      title: ""
     },
+    
     data: [
       {
-        type: "pie",
-        indexLabelFontColor: "#FFFFFF",
+        type: "column",
         showInLegend: true,
-        toolTipContent: "{name}: <strong>{y}%</strong>",
-        indexLabel: "{name} - {y}%",
+        legendMarkerColor: "grey",
+        legendText: "PROINVESTOR",
         
         dataPoints: [
-          { y: 5.5, name: "Bonos Extranjeros" },
-          { y: 8, name: "Criptoactivos" },
-          { y: 9.8, name: "Factoring Latam y USA" },
-          { y: 10.1, name: "Mercado Inmobiliario" },
-          { y: 10.25, name: "Participaciones de Factoring Institucional" },
-          { y: 26.75, name: "Divisas (Arbitraje, forex)" },
+          { y: 5.5, label: "Bonos Extranjeros" },
+          { y: 8, label: "Criptoactivos" },
+          { y: 9.8, label: "Factoring Latam y USA" },
+          { y: 10.1, label: "Mercado Inmobiliario" },
+          { y: 10.25, label: "Participaciones de Factoring Institucional" },
+          { y: 26.75, label: "Divisas (Arbitraje, forex)" },
           {
             y: 28.6,
-            name: "Participaciones en fondos satélite",
+            label: "Participaciones en fondos satélite",
             exploded: true,
           },
         ],

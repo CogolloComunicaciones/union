@@ -39,12 +39,12 @@ p {
 
 .h1 {
   font-family: $fontBronovaRegular;
-  @include font-size(25, 30, 0);
+  @include font-size(20, 25, 0);
   color: $white;
   font-weight: 100;
 
   @include tablet {
-    @include font-size(35, 40, 0);
+    @include font-size(25, 30, 0);
   }
 
   @include large {
@@ -54,12 +54,12 @@ p {
 
 .h2 {
   font-family: $fontBronovaRegular;
-  @include font-size(25, 30, 0);
+  @include font-size(20, 25, 0);
   color: $white;
   font-weight: 100;
 
   @include tablet {
-    @include font-size(35, 40, 0);
+    @include font-size(25, 30, 0);
   }
 
   @include large {
@@ -69,13 +69,13 @@ p {
 
 .h3 {
   font-family: $fontBronovaRegular;
-  @include font-size(18, 23, 0);
+  @include font-size(16, 21, 0);
   color: $color__primary;
   font-weight: 100;
   margin-bottom: 10px;
 
   @include tablet {
-    @include font-size(20, 25, 0);
+    @include font-size(18, 23, 0);
   }
 
   @include large {
@@ -120,7 +120,7 @@ p {
   text-align: justify;
 
   @include tablet {
-    @include font-size(16, 20, 0);
+    @include font-size(14, 18, 0);
   }
 
   @include large {
