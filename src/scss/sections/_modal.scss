@@ -52,16 +52,8 @@
       background-color: $color__primary;
     }
   }
-  &-close {
-    position: absolute;
-    bottom: 5%;
-    left: 50%;
-    margin-left: -18px;
-    width: 45px;
-    z-index: 1;
-    svg path {
-      fill: $color__primary;
-    }
+  .btn {
+    margin: 15px 0 0 auto;
   }
   #chartContainer {
     button,
