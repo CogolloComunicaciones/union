@@ -5,10 +5,26 @@
   justify-content: space-between;
   align-items: center;
   width: 100%;
-  height: 110px;
+  height: 80px;
   padding: 0 30px;
   z-index: 9999;
   transition: all 0.2s ease;
+  @include large {
+    height: 110px;
+  }
+  .header-logo--text {
+    display: none;
+    @include large {
+      display: block;
+    }
+  }
+  .header-logo--scroll {
+    opacity: 1;
+    @include large {
+      opacity: 0;
+      display: none;
+    }
+  }
   &.sticky {
     height: 80px;
     //background-color: $color__primary--opacity;
@@ -17,32 +33,73 @@
     }
     .header-logo--scroll {
       opacity: 1;
+      display: block;
     }
   }
   nav {
-    height: 100%;
+    position: absolute;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: $color__primary;
+    right: -100%;
+    top: 0;
+    bottom: 0;
+    padding-top: 80px;
+    box-sizing: border-box;
+    transition: all 0.4s ease;
+    &.active {
+      right: 0;
+    }
+    @include large {
+      position: relative;
+      display: block;
+      right: 0;
+      width: auto;
+      height: 100%;
+      padding-top: 0;
+      background: transparent;
+    }
   }
   ul {
     display: flex;
     align-items: center;
+    flex-direction: column;
+    width: 100%;
     margin: 0;
     padding: 0;
     height: 100%;
+    overflow: hidden;
+    overflow-y: scroll;
+    @include large {
+      flex-direction: row;
+      width: auto;
+      height: 100%;
+      overflow: visible;
+      overflow-y: inherit;
+    }
     &.sub-menu {
-      position: absolute;
-      left: 20px;
-      top: 80px;
+      position: relative;
       display: flex;
       flex-direction: column;
       align-items: end;
       width: max-content;
       height: auto;
-      padding: 15px 20px;
-      opacity: 0;
-      visibility: hidden;
-      transition: all .3s ease-in-out;
-      transform: translateY(30px);
+      padding: 0 20px;
       background: $color__primary--opacity;
+      @include large {
+        position: absolute;
+        left: 20px;
+        top: 80px;
+        padding: 20px;
+        opacity: 0;
+        visibility: hidden;
+        transition: all 0.3s ease-in-out;
+        transform: translateY(30px);
+      }
+
       li {
         padding: 5px 0 5px 0;
       }
@@ -52,15 +109,38 @@
     position: relative;
     display: flex;
     align-items: center;
-    height: 100%;
+    justify-content: center;
+    flex-direction: column;
+    width: 100%;
+    padding: 20px 20px 0px 20px;
     list-style: none;
-    padding-left: 20px;
+    @include large {
+      width: auto;
+      height: 100%;
+      padding: 0;
+      padding-left: 20px;
+    }
     a {
       color: $white;
       text-decoration: none;
       line-height: 23px;
+      text-align: center;
       &.active {
         border-bottom: 1px solid $white;
+      }
+      &.link {
+        text-transform: uppercase;
+        font-weight: bold;
+        @include large {
+          font-weight: normal;
+          text-transform: none;
+        }
+      }
+      &.btn {
+        border: 1px solid $white;
+        @include large {
+          border: none;
+        }
       }
     }
     &:hover {
@@ -91,4 +171,75 @@
       }
     }
   }
+}
+
+.toggle-wrap {
+  position: absolute;
+  top: 17px;
+  right: 20px;
+  padding: 10px;
+
+  /*disable selection*/
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  cursor: pointer;
+  @include large {
+    display: none;
+  }
+}
+.toggle-bar,
+.toggle-bar::before,
+.toggle-bar::after,
+.toggle-wrap.active .toggle-bar,
+.toggle-wrap.active .toggle-bar::before,
+.toggle-wrap.active .toggle-bar::after {
+  -webkit-transition: all 0.2s ease-in-out;
+  -moz-transition: all 0.2s ease-in-out;
+  -o-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
+}
+.toggle-bar {
+  width: 38px;
+  margin: 10px 0;
+  position: relative;
+  border-top: 6px solid $color__primary;
+  display: block;
+}
+.toggle-bar::before,
+.toggle-bar::after {
+  content: "";
+  display: block;
+  background: $color__primary;
+  height: 6px;
+  width: 38px;
+  position: absolute;
+  top: -16px;
+  -ms-transform: rotate(0deg);
+  -webkit-transform: rotate(0deg);
+  transform: rotate(0deg);
+  -ms-transform-origin: 13%;
+  -webkit-transform-origin: 13%;
+  transform-origin: 13%;
+}
+.toggle-bar::after {
+  top: 4px;
+}
+.toggle-wrap.active .toggle-bar {
+  border-top: 6px solid transparent;
+}
+.toggle-wrap.active .toggle-bar::before {
+  -ms-transform: rotate(45deg);
+  -webkit-transform: rotate(45deg);
+  transform: rotate(45deg);
+  border-top: 6px solid $white;
+}
+.toggle-wrap.active .toggle-bar::after {
+  -ms-transform: rotate(-45deg);
+  -webkit-transform: rotate(-45deg);
+  transform: rotate(-45deg);
+  border-top: 6px solid $white;
 }

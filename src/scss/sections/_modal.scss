@@ -24,7 +24,12 @@
     pointer-events: auto;
   }
   &-box {
-    padding-right: 80px;
+    margin-bottom: 40px;
+    @include large {
+      margin-bottom: 0;
+      padding-top: 0;
+      padding-right: 80px;
+    }
     &--img {
       display: block;
       margin-bottom: 15px;
@@ -38,7 +43,15 @@
     position: relative;
     text-align: right;
     img {
-      width: 75%;
+      width: 100% !important;
+      @include large {
+        width: 75%;
+      }
+      &.img--medium {
+        @include large {
+          width: 95%;
+        }
+      }
     }
     &:before {
       content: "";
@@ -53,7 +66,10 @@
     }
   }
   .btn {
-    margin: 15px 0 0 auto;
+    margin: 15px 0 40px auto;
+    @include large {
+      margin: 15px 0 0 auto;
+    }
   }
   #chartContainer {
     button,

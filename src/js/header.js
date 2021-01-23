@@ -1,13 +1,30 @@
 class Header {
   constructor($el) {
     this.$el = $el;
+    this.$dataMenu = $el.find("[data-menu]");
+    this.$dataOpenMenu = $el.find("[data-open-menu]");
+    this.$dataItem = $el.find("[data-item]");
 
     this.initHeaderListeners();
     this.headerScroll();
     this.headerLinkActive();
   }
 
-  initHeaderListeners() {}
+  initHeaderListeners() {
+    this.$dataOpenMenu.on("click", this.openMenu);
+    this.$dataItem.on("click", this.openItemMenu);
+  }
+
+  openMenu = (e) => {
+    this.$dataOpenMenu.toggleClass("active");
+    this.$dataMenu.toggleClass("active");
+    $("body").toggleClass("active");
+  };
+
+  openItemMenu = (e) => {
+    this.$dataOpenMenu.removeClass("active");
+    this.$dataMenu.removeClass("active");
+  };
 
   headerScroll = () => {
     $(window).scroll(function () {
@@ -36,7 +53,9 @@ class Header {
           nav.find("a.link").removeClass("active");
 
           $(this).addClass("active");
-          nav.find('a.link[href="#' + $(this).attr("id") + '"]').addClass("active");
+          nav
+            .find('a.link[href="#' + $(this).attr("id") + '"]')
+            .addClass("active");
         }
       });
     });

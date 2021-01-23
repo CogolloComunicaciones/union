@@ -11,8 +11,6 @@
   <link rel="stylesheet" href="./dist/css/style.css">
 </head>
 
-
-
 <body>
 
   <!-- HEADER -->
@@ -21,12 +19,12 @@
       <img class="header-logo--text" src="./dist/images/logo-union-capital.png" alt="Logo Union Capital">
       <img class="header-logo--scroll" src="./dist/images/logo-union-capital-scroll.png" alt="Logo Union Capital">
     </a>
-    <nav class="menu">
+    <nav class="menu" data-menu>
       <ul>
-        <li>
+        <li data-item>
           <a href="#inicio" class="link active">Inicio</a>
         </li>
-        <li>
+        <li data-item>
           <a href="#inversiones" class="link">Inversiones</a>
           <ul class="sub-menu">
             <li><a href="#open-proinvestor">Proinvestor</a></li>
@@ -34,10 +32,10 @@
             <li><a href="#open-fact-cash">Fact Cash</a></li>
           </ul>
         </li>
-        <li>
+        <li data-item>
           <a href="#nosotros" class="link">Nosotros</a>
         </li>
-        <li>
+        <li data-item>
           <a href="#banca" class="link">Banca Privada</a>
           <ul class="sub-menu">
             <li><a href="#open-pago-de-obligaciones">Pago de Obligaciones</a></li>
@@ -45,15 +43,18 @@
             <li><a href="#open-consultoria">Consultoría</a></li>
           </ul>
         </li>
-        <li>
+        <li data-item>
           <a href="#contacto" class="link">Contacto</a>
         </li>
-        <li>
+        <li data-item>
           <a class="btn btn--primary color-secondary" href="https://mioficina.unioncapital.eu/" target="_blank">Mi
             Oficina</a>
         </li>
       </ul>
     </nav>
+    <div class="toggle-wrap" data-open-menu>
+      <span class="toggle-bar"></span>
+    </div>
   </header>
   <!-- / HEADER -->
 
@@ -192,7 +193,7 @@
 
     <!-- SECTION 2 -->
     <section id="nosotros" class="section about" style="background-image: url('./dist/images/section-3.jpg');">
-      <div class="row row flex flex--align-center">
+      <div class="row flex flex--align-center module-image">
         <div class="col-4 effect-image">
           <div data-relative-input="true" id="scene">
             <div data-depth="0.1">
@@ -234,7 +235,7 @@
               <p class="paragraph">
                 Ofrecemos asesoría profesional con el objetivo de satisfacer necesidades como inversión,
                 planificación patrimonial, financiera y fiscal para personas naturales y empresas, ajustadas a la
-                medida de cada cliente
+                medida de cada cliente.
               </p>
             </div>
           </div>
@@ -251,7 +252,8 @@
                     Pago de Obligaciones en el Exterior
                   </p>
                 </figcaption>
-                <p class="small-medium">Servicio destinado a personas naturales o jurídicas que tengan inversiones, créditos o pagos...</p>
+                <p class="small-medium">Servicio destinado a personas naturales o jurídicas que tengan inversiones,
+                  créditos o pagos...</p>
                 <div class="btn btn--primary">Leer más</div>
               </figure>
             </a>
@@ -283,7 +285,8 @@
                     Consultoría, planificación y estructuración financiera
                   </p>
                 </figcaption>
-                <p class="small-medium">¿Desea abrir una cuenta, hacer inversiones, obtener soluciones o productos financieros?</p>
+                <p class="small-medium">¿Desea abrir una cuenta, hacer inversiones, obtener soluciones o productos
+                  financieros?</p>
                 <div class="btn btn--primary">Leer más</div>
               </figure>
             </a>
@@ -371,13 +374,13 @@
             <img src="./dist/images/logo-proinvestor.png" alt="">
           </div>
           <p class="paragraph">
-            Pro-investor es un portafolio de inversión en renta variable con dos perfiles de gestión:
-            Un modelo agresivo llamado “Plan Capitalización” enfocado en generar aumento de capital, así
-            como un modelo más conservador llamado Plan Retiro con el objetivo de permitirle al
-            inversionista construir un plan de ahorro que le permita generar patrimonio y Simular un
-            ingreso superior al de una pensión en tan solo 5 años. En ambos casos el portafolio cuenta con
-            un drawndown máximo del 20%. A continuación podemos ver la distribución de activos del
-            portafolia según los dos módelos:
+            Pro-investor es un portafolio de inversión en renta variable con dos perfiles de gestión: Un modelo
+            agresivo llamado “Plan Capitalización” enfocado en generar aumento de capital, así como un
+            modelo más conservador llamado Plan Retiro con el objetivo de permitirle al inversionista
+            construir un plan de ahorro que le permita generar patrimonio y Simular un ingreso superior al de
+            una pensión en tan solo 5 años. En ambos casos el portafolio cuenta con un drawndown máximo
+            del 20%. A continuación, podemos ver la distribución de activos del portafolio según los dos
+            modelos:
           </p>
           <a href="./contacto.html" class="btn btn--transparent btn--medium border--primary">
             Contacto
@@ -387,7 +390,7 @@
       <div class="col-6">
         <div class="modal-image">
           <span>
-            <img style="width: 95% !important;" src="./dist/images/graficos.png" alt="">
+            <img class="img--medium" src="./dist/images/graficos.png" alt="">
           </span>
         </div>
         <a href="#inversiones" title="Close" class="btn btn--primary">
@@ -409,16 +412,15 @@
             ¿Quieres convertir el negocio inmobiliario en una inversión segura y rentable?
           </p>
           <p class="paragraph">
-            El mercado inmobiliario es uno de los sectores de la economía que siempre ofrece
-            multiples y solidas oportunidades de inversión, no solo para generar ingresosde
-            capital, sinotambién para generar patrimonio. Contamos con multiples proyectos de
-            desarrollo inmobiliario en los cuales podrás participar según sean tus necesitadesy
-            objetivos como inversionista.</p>
+            El mercado inmobiliario es uno de los sectores de la economía que siempre ofrece múltiples y
+            solidas oportunidades de inversión, no solo para generar ingresos de capital, sino también para
+            generar patrimonio. Contamos con múltiples proyectos de desarrollo inmobiliario en los cuales
+            podrás participar según sean tus necesidades y objetivos como inversionista.</p>
           <p class="paragraph">
-            Partimos de la premisa “No vendemos casas, estructuramos inversiones” esto quiere
-            decir que nuestros proyectos vienen estructurados de tal manera que se conviertan en
-            inversiones rentables, con garantías y con la posibilidad de siempre generar bien sean
-            ganancias de capital o ingresos residuales en vez de solo de adquirir un predio.
+            Partimos de la premisa “No vendemos casas, estructuramos inversiones” esto quiere decir que
+            nuestros proyectos vienen estructurados de tal manera que se conviertan en inversiones
+            rentables, con garantías y con la posibilidad de siempre generar bien sean ganancias de capital o
+            ingresos residuales en vez de solo de adquirir un predio.
           </p>
           <a href="./contacto.html" class="btn btn--transparent btn--medium border--primary">
             Contacto
@@ -448,12 +450,12 @@
             Tu momento es ahora
           </p>
           <p class="paragraph">
-            Servicio dirigido a empresarios que deseen acceder a sistemas de financiación a través
-            de la compra y venta de facturas y además, abre la puerta a inversionistas para que
-            puedan entrar en programas de inversión en factoring a corto y mediano plazo. Dentro
-            del programa de inversión sepuede participar de lacompra especializada de Facturas
-            desde $10.000.000 hasta $500.000.000 o más todo con una alta ventaja comparativa
-            con respecto a lo ofrecido por la banca y el factoring tradicional en Colombia.
+            Servicio dirigido a empresarios que deseen acceder a sistemas de financiación a través de la
+            compra y venta de facturas y además, abre la puerta a inversionistas para que puedan entrar en
+            programas de inversión en factoring a corto y mediano plazo. Dentro del programa de inversión se
+            puede participar de la compra especializada de Facturas desde $10.000.000 hasta $500.000.000 o
+            más todo con una alta ventaja comparativa con respecto a lo ofrecido por la banca y el factoring
+            tradicional en Colombia.
           </p>
           <a href="./contacto.html" class="btn btn--transparent btn--medium border--primary">
             Contacto

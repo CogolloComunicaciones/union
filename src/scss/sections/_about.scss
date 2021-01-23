@@ -2,17 +2,36 @@
   .effect-image {
     text-align: right;
     z-index: 1;
+    padding-top: 0;
+    &.col-4 {
+      margin-bottom: 0;
+    }
+    div {
+      text-align: center;
+      @include large {
+        text-align: left;
+      }
+    }
     img {
-      width: 300px;
-      transform: translate3d(200px, 50px, 0);
+      width: 150px;
+      @include large {
+        width: 320px;
+        transform: translate3d(200px, 50px, 0);
+      }
       @include desktop-full {
         width: 320px;
       }
     }
   }
   .box-content__bckg {
-    margin-top: 70px;
-    padding: 20px 30px 30px 250px;
+    margin-top: 0px;
+    margin-bottom: 50px;
+    padding: 25px;
     background-color: #000835;
+    @include large {
+      margin-top: 70px;
+      margin-bottom: 0;
+      padding: 20px 30px 30px 250px;
+    }
   }
 }

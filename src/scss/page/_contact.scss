@@ -6,12 +6,21 @@
   }
   &-wrapper {
     margin-top: 70px;
+    .row {
+      padding: 0 6px;
+      @include large {
+        padding: 0 30px;
+      }
+    }
   }
   &-group {
     display: flex;
     flex-direction: column;
     margin-bottom: 20px;
     color: $white;
+    &:last-child {
+      margin: 0;
+    }
     label {
       margin-bottom: 10px;
     }
